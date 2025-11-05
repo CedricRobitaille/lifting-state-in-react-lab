@@ -27,11 +27,16 @@ const App = () => {
   const [stack, setStack] = useState([]);
 
   const addToBurger = (ingredient) => {
-    console.log("Add: ", ingredient)
+    const newStack = [...stack, ingredient];
+    setStack(newStack);
   }
 
   const removeFromBurger = (ingredient) => {
-    console.log("Remove: ", ingredient)
+    const stackPopIndex = stack.findIndex(element => element.name === ingredient.name);
+    const newStack = [...stack]
+    newStack.splice(stackPopIndex, 1)
+
+    setStack(newStack);
   }
 
   return (
