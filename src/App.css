@@ -79,3 +79,39 @@ button {
   background-color: #1a1a1a;
   border: 1px solid transparent;
 }
+
+h2 {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background-color: rgba(122,122,122,.125);
+  text-align: left;
+  position: relative;
+}
+
+.warning {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  background-color: #ff202010;
+  border: 1.5px solid #ff0000;
+  border-radius: 8px;
+  margin: 0;
+}
+
+span {
+  position: absolute;
+  right: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: .5rem .75rem .65rem;
+  background-color: rgba(122,122,122,.5);
+  cursor: pointer;
+  border: 1.5px solid rgba(122,122,122,.75);
+  border-radius: 6px;
+}
+
+span:hover {
+  background-color: rgba(122, 122, 122, .85);
+}

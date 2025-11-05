@@ -39,12 +39,34 @@ const App = () => {
     setStack(newStack);
   }
 
+  const resetStack = () => {
+    setStack([]) // Resets the stack
+  }
+
+  const randomStack = () => {
+    console.log("Random");
+    const stackSize = parseInt(Math.random() * availableIngredients.length-4);
+    const newStack = [];
+    for (let i = 0; i < stackSize + 2; i++) {
+      if (i === 0 || i === stackSize+1) {
+        // Always top/bottom a stack with a bun
+        const randomBun = parseInt(Math.random() * 4);
+        newStack.push(availableIngredients[randomBun]);
+      } else {
+        // Randomize contents
+        const randomIng = parseInt(Math.random() * availableIngredients.length)
+        newStack.push(availableIngredients[randomIng]);
+      }
+    }
+    setStack(newStack)
+  }
+
   return (
     <main>
       <h1>Burger Stacker</h1>
       <section>
-        <IngredientList ingredients={availableIngredients} addToBurger={addToBurger} />
-        <BurgerStack stack={stack} removeFromBurger={removeFromBurger}/>
+        <IngredientList ingredients={availableIngredients} addToBurger={addToBurger} randomStack={randomStack} />
+        <BurgerStack stack={stack} removeFromBurger={removeFromBurger} resetStack={resetStack} />
       </section>
     </main>
   );
