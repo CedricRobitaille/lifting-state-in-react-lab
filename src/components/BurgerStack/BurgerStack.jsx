@@ -2,7 +2,20 @@
 import Ingredient from "../Ingredient/Ingredient";
 
 const BurgerStack = (props) => {
-  return <ul>// map through props.ingredients</ul>;
+  return (
+    <ul id="burger-stack">
+      {
+        props.stack.map((ingredient, index) => (
+          <Ingredient
+            key={index}
+            ingredient={ingredient}
+            operation="remove"
+            action={props.removeFromBurger}
+          />
+        ))
+      }
+    </ul>
+  );
 };
 
 export default BurgerStack;

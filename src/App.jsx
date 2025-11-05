@@ -27,11 +27,11 @@ const App = () => {
   const [stack, setStack] = useState([]);
 
   const addToBurger = (ingredient) => {
-
+    console.log("Add: ", ingredient)
   }
 
   const removeFromBurger = (ingredient) => {
-
+    console.log("Remove: ", ingredient)
   }
 
   return (

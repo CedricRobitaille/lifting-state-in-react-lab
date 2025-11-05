@@ -65,7 +65,7 @@ li {
   border-radius: 8px;
   font-weight: bold;
   text-shadow: 0px 0px 2px #000000;
-
+  width: 25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
